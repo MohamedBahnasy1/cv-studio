@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { ResumeData } from "$lib/types";
-  export let data: ResumeData;
+  
+  let { data }: { data: ResumeData } = $props();
 </script>
 
 <div class="resume-template1">

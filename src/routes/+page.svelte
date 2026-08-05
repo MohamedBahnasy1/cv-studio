@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import EducationForm from "$lib/components/EducationForm.svelte";
     import ExperienceForm from "$lib/components/ExperienceForm.svelte";
     import PersonalInfoForm from "$lib/components/PersonalInfoForm.svelte";
