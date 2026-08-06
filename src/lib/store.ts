@@ -134,5 +134,25 @@ export function resetResumeStore(): void {
 	if (browser) {
 		localStorage.removeItem(STORAGE_KEY);
 	}
-	resume.set({ ...INITIAL_STATE, education: [{ ...INITIAL_STATE.education[0], id: createId() }] });
+	resume.set({
+		personal: {
+			fullName: '',
+			title: '',
+			dob: '',
+			nationality: 'Egyptian',
+			address: '',
+			phone: '',
+			email: '',
+			photo: undefined
+		},
+		profile: '',
+		experience: [],
+		education: [],
+		skills: [],
+		languages: [],
+		awards: [],
+		certificates: [],
+		publications: [],
+		social: []
+	});
 }

@@ -60,7 +60,7 @@
 	style="background-color: {palette.lightBg};"
 >
 	<!-- Left Dark Sidebar (Col Span 4) -->
-	<aside
+	<div
 		class="col-span-4 p-6 flex flex-col justify-between space-y-4 print:p-5"
 		style="background-color: {palette.sidebarBg}; color: {palette.textOnSidebar};"
 	>
@@ -220,10 +220,10 @@
 				</section>
 			{/if}
 		</div>
-	</aside>
+	</div>
 
 	<!-- Right Main Area (Col Span 8) -->
-	<main class="col-span-8 p-7 flex flex-col justify-between relative print:p-6">
+	<div class="col-span-8 p-7 flex flex-col justify-between relative print:p-6">
 		<!-- Top Right Accent Bars -->
 		<div class="absolute top-0 right-6 flex gap-1.5 pointer-events-none">
 			<div class="w-3 h-10 rounded-b-md" style="background-color: {palette.accent};"></div>
@@ -490,5 +490,5 @@
 				<div class="w-3 h-8 rounded-t-md" style="background-color: {palette.accent};"></div>
 			</div>
 		</footer>
-	</main>
+	</div>
 </article>

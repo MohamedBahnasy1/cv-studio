@@ -159,13 +159,13 @@
 		overflow: visible !important;
 	}
 
-	aside,
-	button,
+	aside:not(.print-area *),
+	button:not(.print-area *),
 	.print\:hidden {
 		display: none !important;
 	}
 
-	main {
+	main:not(.print-area *) {
 		display: block !important;
 		width: 210mm !important;
 		height: auto !important;
