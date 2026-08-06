@@ -56,7 +56,7 @@
 	--muted: oklch(0.269 0 0);
 	--muted-foreground: oklch(0.708 0 0);
 	--accent: oklch(0.269 0 0);
-	--accent-foreground: oklch(0.985 0 0);
+	--accent-foreground: oklch(0.205 0 0);
 	--destructive: oklch(0.704 0.191 22.216);
 	--border: oklch(1 0 0 / 10%);
 	--input: oklch(1 0 0 / 15%);
@@ -124,24 +124,49 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+		margin: 0;
 	}
 	html {
 		@apply font-sans;
 	}
 }
-@media print {
-  body * { visibility: hidden; }
-  .print-area, .print-area * { visibility: visible; }
-  .print-area {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-  }
-  .form-panel, .preview-panel > button { display: none !important; }
 
-  @page {
-    size: A4;
-    margin: 12mm;
-  }
-  section { break-inside: avoid; }
+/* Use Cairo for Arabic UI elements */
+[dir="rtl"] {
+	font-family: 'Cairo', 'Inter Variable', sans-serif;
+}
+
+@media print {
+	@page {
+		size: A4 portrait;
+		margin: 0;
+	}
+
+	*,
+	*::before,
+	*::after {
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	html,
+	body {
+		width: 210mm !important;
+		height: 297mm !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		background: #ffffff !important;
+		overflow: hidden !important;
+	}
+
+	aside,
+	button,
+	.print\:hidden {
+		display: none !important;
+	}
+
+	section {
+		break-inside: avoid;
+		page-break-inside: avoid;
+	}
 }
