@@ -123,7 +123,7 @@
 			<Input
 				id="phone"
 				type="tel"
-				placeholder="01062078243"
+				placeholder="01000000000"
 				value={$resume.personal.phone}
 				oninput={(e) => handleFieldInput("phone", e)}
 			/>
@@ -146,7 +146,7 @@
 			<Label for="dob">تاريخ الميلاد</Label>
 			<Input
 				id="dob"
-				placeholder="21-6-2000"
+				placeholder="01-01-2000"
 				value={$resume.personal.dob}
 				oninput={(e) => handleFieldInput("dob", e)}
 			/>

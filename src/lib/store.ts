@@ -9,7 +9,7 @@ const INITIAL_STATE: ResumeData = {
 		fullName: '',
 		title: '',
 		dob: '',
-		nationality: '',
+		nationality: 'Egyptian',
 		address: '',
 		phone: '',
 		email: ''
